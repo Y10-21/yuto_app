@@ -1,5 +1,5 @@
 class MerchandisesController < ApplicationController
   def index 
-    @merchandise = Merchandise.all
+    @merchandises = Merchandise.all
   end
 end

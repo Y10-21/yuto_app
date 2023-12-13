@@ -13,6 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2023_12_13_054227) do
   create_table "merchandises", charset: "utf8mb4", force: :cascade do |t|
     t.string "merchandise_name"
+    t.string "merchandise_url"
     t.integer "merchandise_num"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

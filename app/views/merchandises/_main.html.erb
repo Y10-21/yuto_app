@@ -1,0 +1,12 @@
+<div class="item">
+  <% @merchandises.each do |merchandise| %>
+   <div class="item__img">
+    <%= image_tag merchandise.merchandise_url %>
+  </div>
+  <p class="item__link">
+    <a href="">
+      購入画面
+    </a>
+  </p>
+  <% end %>
+</div>
