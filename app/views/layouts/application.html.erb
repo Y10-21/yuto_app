@@ -11,6 +11,33 @@
   </head>
 
   <body>
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          test
+        </h1>
+        <% if user_signed_in? %>
+          <nav class="header__nav">
+            <ul class="nav">
+              <li class="nav__item">
+                <%= link_to "ログアウト", destroy_user_session_path,data: {turbo_method: :delete} %>
+              </li>
+            </ul>
+          </nav>
+        <% else %>
+          <nav class="header__nav">
+            <ul class="nav">
+              <li class="nav__item">
+                <%= link_to "ログイン",new_user_session_path %>
+              </li>
+              <li class="nav__item">
+                <%= link_to "新規登録",new_user_registration_path %>
+              </li>
+            </ul>
+          </nav>
+        <% end %>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
